@@ -20,7 +20,7 @@ classdef MonkSkinTone < SkinTone
 
             lab_monk = rgb2lab(rgb_monk/255);
 
-            ita_monk = rad2deg(atan((lab_monk(:,1) - 50) ./ lab_monk(:,3)));
+            ita_monk = obj.lab2ita(lab_monk);
 
             marker = {};
             for i = 1:10

@@ -13,10 +13,8 @@ classdef SkinTone < handle
         function obj = SkinTone
         end
 
-        function outputArg = method1(obj,inputArg)
-            %METHOD1 Summary of this method goes here
-            %   Detailed explanation goes here
-            outputArg = obj.Property1 + inputArg;
+        function outputArg = lab2ita(obj,lab)
+            outputArg = rad2deg(atan((lab(:,1) - 50) ./ lab(:,3)));
         end
     end
 end
