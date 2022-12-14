@@ -14,7 +14,8 @@ classdef SkinTone < handle
         end
 
         function outputArg = lab2ita(obj,lab)
-            outputArg = rad2deg(atan((lab(:,1) - 50) ./ lab(:,3)));
+%            outputArg = rad2deg(atan((lab(:,1) - 50) ./ lab(:,3)));
+            outputArg = rad2deg(atan2((lab(:,1) - 50) , lab(:,3)));
         end
     end
 end
